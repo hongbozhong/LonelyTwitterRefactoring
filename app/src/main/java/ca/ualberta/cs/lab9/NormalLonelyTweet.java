@@ -1,37 +1,34 @@
-package ca.ualberta.cs.lonelytwitter;
+package ca.ualberta.cs.lab9;
 
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.Date;
 
-public class NormalLonelyTweet implements Serializable {
+public class NormalLonelyTweet extends Tweet implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	protected Date tweetDate;
-	protected String tweetBody;
 
 	public NormalLonelyTweet() {
 	}
 
 	public NormalLonelyTweet(String text, Date date) {
-		this.tweetDate = date;
-		this.tweetBody = text;
+		super(text, date);
 	}
 
 	public Date getTweetDate() {
-		return tweetDate;
+		return super.getTweetDate();
 	}
 
 	public void setTweetDate(Date tweetDate) {
-		this.tweetDate = tweetDate;
+		super.setTweetDate(tweetDate);
 	}
 
 	public String getTweetBody() {
-		return tweetBody;
+		return super.getTweetBody();
 	}
 
 	public void setTweetBody(String tweetBody) {
-		this.tweetBody = tweetBody;
+		super.setTweetBody(tweetBody);
 	}
 
 	private void writeObject(java.io.ObjectOutputStream out) throws IOException {
